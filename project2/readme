@@ -1,0 +1,16 @@
+Name: Hankun Yi
+ID: 5569736567
+
+
+In this project, I have written 3 files, doctor.cpp, healthcenter.cpp, patient.cpp
+
+For healthcenter.cpp. It first bind to a UDP socket and waiting for patient information. After that, it wait for doctor login and check their password. Then it send patient information to relevant docotor. At last, it close socket.
+
+For patient.cpp. It first connect to healthcenter, and patient send information. Then it construct TCP socket, and wait for doctor to contact them. After doctor contact them, they will successful join the doctor group and choose the first available schedule. If doctor send other patient's information. The patient will directly contact to next patient through TCP.
+
+For doctor.cpp. It first send name and password to healthcenter.Then it will receive patient's information. Then it will read its schedule. If it has only one patient, it will send schedule to patient and let patient join the group. If it has multiple patients, it will send schedule and other patient information to its first patient.
+
+To run the program, you can just use the makefile.
+Then ./healthcenter ./patient ./doctor. You can see the message each member receieve.
+
+
