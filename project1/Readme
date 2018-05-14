@@ -1,0 +1,21 @@
+Name: Hankun Yi
+email: hankunyi@usc.edu
+
+In this project, I simulate client-server socket programming using TCP.
+
+On the server side, I do following things:
+1. use getaddrinfo() to get address information
+2. use socket() to get the socket file descriptor
+3. use setsocketopt() to reuse the port
+4. use bind() to associate socket with the port
+5. use listen() to listen for any connetions
+6. use accpet() to create a new socket file descriptor for the connection from client
+7. use recv() to recieve message from client
+8. use send() to send message to client
+
+On the client side, I do following things:
+1. use getaddrinfo() to get address information
+2. use socket() to get the socket file descriptor
+3. use connect() to connet to server
+7. use send() to send message to server
+8. use recv() to recieve message from server
